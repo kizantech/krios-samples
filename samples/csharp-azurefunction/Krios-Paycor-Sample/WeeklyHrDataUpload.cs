@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -41,6 +42,15 @@ namespace Krios.DataLoad
 
             var kriosData = new List<KriosData>();
             CreateKriosData(kriosData, employees, timeOffReport);
+
+            await SendKriosData(kriosData, "{azure tenant id}");
+        }
+
+        private async Task SendKriosData(List<KriosData> kriosData, string tenantId)
+        {
+            _client.BaseAddress = new Uri("https://kz-krios-apim-prod.azure-api.net/");
+            var kriosRequestBody = new StringContent(JsonConvert.SerializeObject(kriosData), Encoding.UTF8, "application/json");
+            var kriosRequest = await _client.PostAsync($"api/DataLoad/{tenantId}/json", kriosRequestBody);
         }
 
         private void CreateKriosData(List<KriosData> kriosData, List<EmployeeDetails> employeeDetails, List<TimeOffRecord> timeOffRecords)
