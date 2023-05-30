@@ -22,7 +22,11 @@ Follow the steps below to install and configure Krios:
 1. **Install Application through Azure Portal:**
 
 - Access the Azure Portal ([https://portal.azure.com](https://portal.azure.com)).
-- Follow the instructions provided in the Krios documentation to install the application. Make sure to complete all necessary configurations during the installation process.
+- Go to "Create a Resource"
+- Search for "Krios"
+- Select the Krios application from the Azure Marketplace
+- Select the appropriate plan that matches your company's size and needs.
+- "Subscribe"!
 
 2. **Create an Application in your Azure AD to upload data to Krios with:**
 
