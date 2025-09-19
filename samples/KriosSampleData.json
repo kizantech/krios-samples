@@ -1,0 +1,24 @@
+[
+  {
+    "userPrincipalName": "JustinK@contoso.com",
+    "ptoBalance": 44.2,
+    "employeeID": "JUSTINK",
+    "dob": "2023-12-01",
+    "workAnniversary": "2013-01-29",
+    "nextPayroll": "2024-05-31",
+    "customData1": "668 / 100",
+    "customData2": "8",
+    "customData3": "00"
+  },
+  {
+    "userPrincipalName": "JeffF@contoso.com",
+    "ptoBalance": 192.6,
+    "employeeID": "123456",
+    "dob": "2023-12-01",
+    "workAnniversary": "2004-12-27",
+    "nextPayroll": "2024-05-18",
+    "customData1": "3940 / 0",
+    "customData2": "8",
+    "customData3": "00"
+  }
+]
