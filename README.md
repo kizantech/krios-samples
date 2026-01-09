@@ -41,7 +41,7 @@ Follow the steps below to install and configure Krios:
 
 5. **Upload the SPFX Package to the App Catalog and Publish to your SharePoint portal:**
 
-- Upload the Krios Viva Connections Card to your organization's App Catalog via [these instructions([https://github.com/kizantech/krios-samples/blob/main/publishing-krios-to-viva-connections.md)
+- Upload the Krios Viva Connections Card to your organization's App Catalog via [these instructions](https://github.com/kizantech/krios-samples/blob/main/publishing-krios-to-viva-connections.md)
 
 6. **Add the Krios Card to your Viva Connections Dashboard:**
 
