@@ -11,9 +11,9 @@ $fileNameToBeUploaded = "PTOSummarized.json"
 
 $clientId = "{enter your app's client id guid}"  #the client ID for your application
 $secret = '{client secret}' #the secret for your application registration
-$tenant = "{azure tenant id guid}" #your Azure AD tenant ID
+$tenant = "{azure tenant id guid}" #your Entra tenant ID
 
-$scope = 'api://{app client id here}/.default' #api scope, this should be static, just put the guid for your app id in the curly braces
+$scope = 'api://167d39bc-b848-4212-a93d-c441201e3b30/.default' #api scope, this should be static, it references KiZAN's Krios API app registration
 
 
 #End of Organization Specific Variables
