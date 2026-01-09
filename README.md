@@ -14,42 +14,34 @@ Krios offers the following features and information to employees:
 - Work Anniversary Information: Krios displays employees' work anniversary details, allowing them to celebrate milestones and foster a sense of recognition and appreciation.
 - Payroll Dates: Employees can access information about upcoming payroll dates, helping them stay informed and plan accordingly.
 
-Krios is available for your employees anywhere Microsoft Teams is accessible and supports customizations for both frontline and international employees, ensuring a tailored experience for every user.
+Krios is available for your employees anywhere Microsoft Teams or SharePoint Online is accessible and supports customizations for both frontline and international employees, ensuring a tailored experience for every user.
 
 ## Installation Instructions:
 Follow the steps below to install and configure Krios:
 
 1. **Install Application through Azure Portal:**
 
-- Access the Azure Portal ([https://portal.azure.com](https://portal.azure.com)).
+- Access the Microsoft [Entra Portal](https://entra.microsoft.com). Ensure that your user account has an email address associated with it in Entra so that Krios can register your organization properly. 
 - Go to "Create a Resource"
-- Search for "Krios"
-- Select the Krios application from the Azure Marketplace
+- Search the Azure Marketplace for "Krios"
 - Select the appropriate plan that matches your company's size and needs.
 - "Subscribe"!
 
-2. **Create an Application in your Azure AD to upload data to Krios with:**
+1. **Create an Application in your Entra ID to upload data to Krios with:**
 
-- Navigate to the Azure Active Directory (AD) portal ([https://portal.azure.com](https://portal.azure.com)).
+- When you installed Krios via the Azure Marketplace, an Enterprise Application Registration was added to your Entra ID. A Global Administrator for your organization will need to:
+  - Browse 
+- Navigate to the [Entra Portal](https://entra.microsoft.com) again
 - Create a new application in your Azure AD by following the guidelines provided in the Krios documentation.
 - Take note of the application's client ID or any other required credentials for future reference.
 
-3. **Grant the application the Krios.DataLoad permission under Krios API in Azure AD:**
+3. **Send your data to the Krios Data Load API:**
 
-- In the Azure AD portal, navigate to the Krios API.
-- Locate the "Krios.DataLoad" permission and grant it to the application created in the previous step.
-- Save the changes and ensure the application has the necessary permissions to interact with the Krios API.
-
-4. **Send your data to the Krios Data Load API:**
-
-- Refer to the samples and API documentation available at [https://github.com/kizantech/krios-samples](https://github.com/kizantech/krios-samples) for detailed instructions on how to format and send data to the Krios Data Load API.
-- Use the client ID and credentials obtained earlier to authenticate your requests and upload the data successfully.
+- Refer to the [samples and API documentation available in this repository](https://github.com/kizantech/krios-samples/blob/main/samples/powershell/UploadDataToKrios.ps1) for detailed instructions on how to format and send data to the Krios Data Load API.
 
 5. **Upload the SPFX Package to the App Catalog and Publish to your SharePoint portal:**
 
-- Access your SharePoint portal and navigate to the App Catalog.
-- Follow the instructions provided in the Krios documentation to upload the SPFX Package to the App Catalog.
-- Publish the package to make it available for installation by users.
+- Upload the Krios Viva Connections Card to your organization's App Catalog via [these instructions([https://github.com/kizantech/krios-samples/blob/main/publishing-krios-to-viva-connections.md)
 
 6. **Add the Krios Card to your Viva Connections Dashboard:**
 
